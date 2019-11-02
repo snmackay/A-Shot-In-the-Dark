@@ -56,7 +56,7 @@ def parseAdjacency(adList):
 	retVal = {}
 	for item in splitList:
 		splitItem = item.split(",")
-		retVal[int(splitItem[0])] = splitItem[1]
+		retVal[splitItem[1]] = int(splitItem[0])
 	return retVal
 #creates list of items in a node
 def parseNodeItems(itemList):
@@ -92,4 +92,18 @@ def itemEnums(typeString):
 	if(typeString == "Clothes"):
 		return ItemTypes.CLOTHES
 	return ItemTypes.NULL_ITEM
+
+#basic logic
+def traverse(startNode):
+	currentNode = startNode
+	while(currentNode is not None):
+		print(currentNode.dialogue)
+		print("Actions: ")
+		for act in currentNode.children.keys():
+			print("\t", act)
+		user_val = input("")
+		while user_val not in currentNode.children.keys():
+			print("Command unknown")
+			user_val = input("")
+		currentNode = startNode.children[user_val]
 
