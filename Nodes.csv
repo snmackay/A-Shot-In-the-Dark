@@ -1,0 +1,12 @@
+-1,Dialogue,Items,Adjacency list,On Inspect,Actions
+0,"Jail, it's a cold dark place. And you've been here a while. Problem with not playing by the rules. ",plate,"[{1,door},{2,sit on bed}]",plate added,"[door,sit on bed]"
+1,"*door opens, guard appears.* Todays you're lucky day someone wants you free'd.",,"[{3, ok?}]",A guard. He looks tired,[ok?]
+2,Arrested for speaking my mind. Guess that’s how society is now…,plate,"[{1, get up}]",plated added,[get up]
+3,"*Guard turns around* ""Follow me"" ",,"[{4, follow him}]",The guard seems to want you to follow,[follow him]
+4,You walk down a long hallway. You can hear other prisoners shuffling around in their cells,,"[{5, keep walking}]",The hallway is dark with cells lining either side,[keep walking]
+5,,,,,
+6,,,,,
+7,,,,,
+8,,,,,
+9,,,,,
+0,,,,,
