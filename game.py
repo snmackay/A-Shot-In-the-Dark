@@ -36,7 +36,7 @@ class Items:
 
 #parse nodes
 def parseNodes(filename):
-	nodeList = []
+	nodeList = {}
 	with open(filename) as f:
 		csv_reader = csv.reader(f)
 		csv_reader.next()
@@ -47,7 +47,7 @@ def parseNodes(filename):
 			adList = parseAdjacency(line[3])
 			inspec = line[4]
 
-			nodeList.append(Node(node, dia, inspec, adList))
+			nodeList[node] = Node(node, dia, inspec, adList)
 		f.close()
 	return nodeList;
 #creates diactionary of actions; key: nodeID, value: Action
@@ -65,7 +65,7 @@ def parseNodeItems(itemList):
 
 #parse itmes
 def parseItems(filename):
-	itemList = []
+	itemList = {}
 	with open(filename) as f:
 		csv_reader = csv.reader(f)
 		csv_reader.next()
@@ -74,7 +74,7 @@ def parseItems(filename):
 			iType = itemEnums(line[1])
 			name = line[2]
 			flavorText = line[3]
-			itemList.append(Items(iType, iNum, name, flavorText))
+			itemList[iNum] = Items(iType, iNum, name, flavorText)
 		f.close()
 	return itemList
 #set item to its enum
