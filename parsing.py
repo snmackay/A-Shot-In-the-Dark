@@ -11,7 +11,7 @@ def parseAdjacency(adList):
     retVal = {}
     for item in splitList:
         splitItem = item.split(",")
-        retVal[splitItem[1]] = int(splitItem[0])
+        retVal[splitItem[1].lstrip()] = int(splitItem[0])
     return retVal
 
 # creates list of items in a node
