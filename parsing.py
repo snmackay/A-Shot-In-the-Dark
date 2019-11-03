@@ -38,8 +38,7 @@ def parseNodes(filename):
              itemList = parseNodeItems(line[2])
              adList = parseAdjacency(line[3])
              inspec = line[4]
-
-         nodeList[node] = Node(node, dia, inspec, adList)
+             nodeList[node] = Node(node, dia, inspec, adList)
          f.close()
     return nodeList
 
